@@ -102,3 +102,6 @@ gem/intermediate/*
 
 # images
 *.png
+.idea
+log
+emb
