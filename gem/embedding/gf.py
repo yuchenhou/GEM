@@ -6,16 +6,14 @@ if 'DISPLAY' not in environ:
     matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
-import networkx as nx
 import numpy as np
-import scipy.io as sio
 
 import sys
 sys.path.append('./')
 
 from static_graph_embedding import StaticGraphEmbedding
-from gem.utils import graph_util, plot_util
-from gem.evaluation import visualize_embedding as viz
+from gem.utils import graph_util
+from evaluation import visualize_embedding as viz
 from time import time
 		
 class GraphFactorization(StaticGraphEmbedding):

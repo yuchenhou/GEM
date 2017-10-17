@@ -1,10 +1,11 @@
-from gem.evaluation import metrics
-from gem.utils import evaluation_util, graph_util
-import numpy as np
+from evaluation import metrics
 import networkx as nx
-from utils import embed_util
 
-def evaluateStaticLinkPrediction(digraph, graph_embedding, 
+from evaluation import metrics
+from gem.utils import evaluation_util, graph_util
+
+
+def evaluateStaticLinkPrediction(digraph, graph_embedding,
                                  train_ratio=0.8,
                                  n_sample_nodes=None,
                                  sample_ratio_e=None,

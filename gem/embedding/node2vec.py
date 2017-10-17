@@ -4,14 +4,9 @@ if 'DISPLAY' not in environ:
     disp_avlbl = False
     import matplotlib
     matplotlib.use('Agg')
-import matplotlib.pyplot as plt
 
 import matplotlib.pyplot as plt
-import networkx as nx
 import numpy as np
-import scipy.io as sio
-import scipy.sparse as sp
-import scipy.sparse.linalg as lg
 from time import time
 
 import sys
@@ -19,8 +14,8 @@ sys.path.append('./')
 from subprocess import call
 
 from static_graph_embedding import StaticGraphEmbedding
-from gem.utils import graph_util, plot_util
-from gem.evaluation import visualize_embedding as viz
+from gem.utils import graph_util
+from evaluation import visualize_embedding as viz
 
 class node2vec(StaticGraphEmbedding):
 

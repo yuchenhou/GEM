@@ -105,3 +105,4 @@ gem/intermediate/*
 .idea
 log
 emb
+data

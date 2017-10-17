@@ -1,5 +1,6 @@
-from gem.evaluation import metrics
-from gem.utils import evaluation_util, graph_util
+from evaluation import metrics
+from gem.utils import evaluation_util
+
 
 def evaluateStaticGraphReconstruction(digraph, graph_embedding,
                                       X_stat, node_l=None, file_suffix=None,

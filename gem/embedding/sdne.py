@@ -6,24 +6,19 @@ if 'DISPLAY' not in environ:
     matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
-import numpy as np
-import scipy.io as sio
-
 import sys
 sys.path.append('./')
 
 from static_graph_embedding import StaticGraphEmbedding
-from gem.utils import graph_util, plot_util
-from gem.evaluation import visualize_embedding as viz
+from gem.utils import graph_util
+from evaluation import visualize_embedding as viz
 from sdne_utils import *
 
-from keras.layers import Input, Dense, Lambda, merge
+from keras.layers import Input, Lambda, merge
 from keras.models import Model, model_from_json
-import keras.regularizers as Reg
-from keras.optimizers import SGD, Adam
+from keras.optimizers import SGD
 from keras import backend as KBack
 
-from theano.printing import debugprint as dbprint, pprint
 from time import time
 
 class SDNE(StaticGraphEmbedding):
