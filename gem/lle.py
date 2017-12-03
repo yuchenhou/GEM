@@ -1,12 +1,14 @@
+import time
 from gem.embedding.lle import LocallyLinearEmbedding
 from gem.utils import graph_util
 import pandas
 import networkx
 
+
 def main(data_set_name):
     dimensions = 1
     input_file = './graph/' + data_set_name + '.tsv'
-    output_file = './data/' + data_set_name + '.emb'
+    output_file = '../data/' + data_set_name + '.emb'
     # Instatiate the embedding method with hyperparameters
     lle = LocallyLinearEmbedding(dimensions)
 
@@ -21,5 +23,9 @@ def main(data_set_name):
 
 
 if __name__ == '__main__':
-    for data_set_name in ['airport', 'authors', 'collaboration', 'facebook', 'congress', 'forum']:
+    # for data_set_name in ['airport', 'authors', 'collaboration', 'facebook', 'congress', 'forum']:
+    for data_set_name in ['airport', 'collaboration', 'congress', 'forum']:
+        start_time = time.time()
         main(data_set_name)
+        elapsed_time = time.time() - start_time
+        print(data_set_name, elapsed_time)
